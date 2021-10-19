@@ -12,17 +12,17 @@ export default function Signup() {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    console.log(emailRef.current.value,passwordConfirmRef.current.value,passwordRef.current.value);
+
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
       return setError("Passwords do not match")
     }
 
     try {
-      setError("")
-      setLoading(true)
+        setError("")
+        setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
     } catch {
-      setError("Failed to create an account")
+      setError('Kindly Enter password more then 6 or maybe change the email')
     }
 
     setLoading(false)
