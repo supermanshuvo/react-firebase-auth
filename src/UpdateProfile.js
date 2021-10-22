@@ -50,7 +50,7 @@ export default function UpdateProfile() {
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
-              <Form.Control
+              <Form.Control disabled
                 type="email"
                 ref={emailRef}
                 required
